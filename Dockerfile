@@ -32,7 +32,6 @@ ADD nginx/nginx-env.conf /etc/nginx/main.d/
 ADD nginx/macnamer.conf /etc/nginx/sites-enabled/macnamer.conf
 ADD settings.py $APP_DIR/macnamer/
 RUN mkdir -p $APP_DIR/macnamer/db
-RUN touch $APP_DIR/macnamer/db/.touch
 ADD settings_import.py $APP_DIR/macnamer/
 ADD passenger_wsgi.py $APP_DIR/
 ADD django/management/ $APP_DIR/namer/management/
