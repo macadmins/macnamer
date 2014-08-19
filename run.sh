@@ -2,6 +2,8 @@
 
 cd $APP_DIR
 ADMIN_PASS=${ADMIN_PASS:-}
+mkdir -p db
+chown -R app:app $APP_DIR
 python manage.py syncdb --noinput
 python manage.py migrate --noinput
 python manage.py collectstatic --noinput
@@ -13,5 +15,6 @@ else
 fi
 
 chown -R app:app $APP_DIR
-chmod go+x $APP_DIR
-chmod go+w $APP_DIR/db/macnamer.db
+# chmod go+x $APP_DIR
+# chmod go+w $APP_DIR/db
+# chmod go+w $APP_DIR/db/macnamer.db

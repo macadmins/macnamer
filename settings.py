@@ -124,7 +124,6 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'namer',
     'south',
-    'macnamer',
     'bootstrap_toolkit',
 )
 
